@@ -44,3 +44,28 @@ ggplot(complete,aes(x=whiteE,y=heat))+
   labs(title="White Population vs Heat",x="White Population",y="Heat")+
   theme_minimal()
 
+
+## model with racial + income
+model1<-lm(heat~asianE+medIncE, data=complete)
+summary(model1)
+
+model1_1<-lm(heat~asianE+poverty_rate_percentage, data=complete)
+summary(model1_1)
+
+model2<-lm(heat~blackE+medIncE, data=complete)
+summary(model2)
+
+model2_1<-lm(heat~blackE+poverty_rate_percentage, data=complete)
+summary(model2_1)
+
+model3<-lm(heat~hisp_latxE+medIncE, data=complete)
+summary(model3)
+
+model3_1<-lm(heat~hisp_latxE+poverty_rate_percentage, data=complete)
+summary(model3_1)
+
+model4<-lm(heat~whiteE+medIncE, data=complete)
+summary(model4)
+
+model4_1<-lm(heat~whiteE+poverty_rate_percentage, data=complete)
+summary(model4_1)
