@@ -28,7 +28,7 @@ acsVariables <- c(totpop = "B01001_001",
                   hisp_latx = "B03003_003", #Hispanic/Latine
                   white = "B03002_003", #White Non-Hispanic
                   medInc = "B19013_001",
-                  poverty_rate = "B17001_002E" ) 
+                  poverty_rate = "B17001_002E" )
 
 mc_2022<- get_acs(geography = "tract",
                   variables = acsVariables,
